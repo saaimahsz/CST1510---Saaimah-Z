@@ -1,10 +1,10 @@
 """
-RECORD CHECK  -  my version
+RECORD CHECK  -  cyber security
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  : Saaimah Zainab
+Lane  : Cyber
+Date  : 
 
 Run it:   python template.py
 
@@ -21,9 +21,9 @@ Delete these instructions as you replace them with your code.
 #
 #    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+source_ip = input("Source IP: ")
+failed_logins = float(input("Failed logins: "))
+total_attempts = float(input("Total attempts: "))
 
 
 # ================================================================== PROCESS
@@ -34,8 +34,10 @@ second = 0.0    # : replace with an input() call, converted
 #
 #    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
+difference = total_attempts - failed_logins
+percent = failed_logins / total_attempts * 100
+
+successful_logins = total_attempts - failed_logins
 
 
 # =================================================================== OUTPUT
@@ -50,10 +52,14 @@ percent = 0.0      #
 
 print()
 print("=" * 34)
-print(f"  RECORD CHECK  -  {label}")
+print(f"  RECORD CHECK  -  {source_ip}")
 print("=" * 34)
 
-# : your report lines go here
+print (f"Failed    : {failed_logins:>8.2f}")
+print (f"Total     : {total_attempts:>8.2f}")
+print (f"Remaining : {difference:>+8.2f}")
+print (f"Percentage: {percent:>8.2f}%")
+print (f"Successful: {successful_logins:>8.2f}")
 
 print("=" * 34)
 
